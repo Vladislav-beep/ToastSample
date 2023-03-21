@@ -13,6 +13,7 @@
 		B97D365329CA18FD00437683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97D365129CA18FD00437683 /* Main.storyboard */; };
 		B97D365529CA190300437683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B97D365429CA190300437683 /* Assets.xcassets */; };
 		B97D365829CA190300437683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97D365629CA190300437683 /* LaunchScreen.storyboard */; };
+		B97D366029CA196D00437683 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D365F29CA196D00437683 /* NotificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B97D365429CA190300437683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B97D365729CA190300437683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B97D365929CA190300437683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B97D365F29CA196D00437683 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B97D365429CA190300437683 /* Assets.xcassets */,
 				B97D365629CA190300437683 /* LaunchScreen.storyboard */,
 				B97D365929CA190300437683 /* Info.plist */,
+				B97D365F29CA196D00437683 /* NotificationService.swift */,
 			);
 			path = ToastSample;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97D366029CA196D00437683 /* NotificationService.swift in Sources */,
 				B97D365029CA18FD00437683 /* ViewController.swift in Sources */,
 				B97D364C29CA18FD00437683 /* AppDelegate.swift in Sources */,
 				B97D364E29CA18FD00437683 /* SceneDelegate.swift in Sources */,
@@ -292,7 +296,6 @@
 				INFOPLIST_FILE = ToastSample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +323,6 @@
 				INFOPLIST_FILE = ToastSample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
