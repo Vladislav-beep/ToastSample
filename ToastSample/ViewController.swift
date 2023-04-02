@@ -37,6 +37,6 @@ class ToastViewController: UIViewController {
     }
     
     @objc func showToast() {
-        NotificationService.showToast(message: "lol", icon: "berry")
+        NotificationService().showToast(message: "Toast is shown", icon: "berry")
     }
 }

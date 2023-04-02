@@ -5,17 +5,23 @@
 //  Created by Владислав Сизонов on 21.03.2023.
 //
 
-import Foundation
 import UIKit
 
 final class NotificationService {
     
+    // MARK: Private
+    
+    private var window: UIWindow? {
+        return UIApplication
+            .shared
+            .connectedScenes
+            .flatMap { ($0 as? UIWindowScene)? .windows ?? [] }
+            .first { $0.isKeyWindow }
+    }
+
     // MARK: Public
     
-    static func showToast(message: String, icon: String) {
-        guard let window = UIApplication.shared.windows.first else {
-            return
-        }
+    func showToast(message: String, icon: String) {
         let toastLbl = UILabel()
         toastLbl.text = message
         toastLbl.textAlignment = .center
@@ -30,17 +36,17 @@ final class NotificationService {
         let adjustedHeight = max(labelHeight, 60)
         
         let backView = UIView()
-        backView.backgroundColor = .blue
+        backView.backgroundColor = .systemTeal
         backView.layer.cornerRadius = 30
         backView.layer.shadowRadius = 4
         backView.layer.shadowOpacity = 0.4
         backView.layer.shadowOffset = CGSize(width: 0, height: 3)
         backView.translatesAutoresizingMaskIntoConstraints = false
         
-        window.addSubview(backView)
+        window?.addSubview(backView)
         NSLayoutConstraint.activate([
-            backView.topAnchor.constraint(equalTo: window.safeAreaLayoutGuide.topAnchor, constant: 20),
-            backView.centerXAnchor.constraint(equalTo: window.centerXAnchor),
+            backView.topAnchor.constraint(equalTo: window?.safeAreaLayoutGuide.topAnchor ?? NSLayoutAnchor(), constant: 20),
+            backView.centerXAnchor.constraint(equalTo: window?.centerXAnchor ?? NSLayoutXAxisAnchor()),
             backView.widthAnchor.constraint(equalToConstant: toastWidth),
             backView.heightAnchor.constraint(equalToConstant: adjustedHeight)
         ])
@@ -69,7 +75,7 @@ final class NotificationService {
         UIView.animate(withDuration: 3.0, animations: {
             backView.alpha = 0
         }) { (_) in
-            toastLbl.removeFromSuperview()
+            backView.removeFromSuperview()
         }
     }
 }
